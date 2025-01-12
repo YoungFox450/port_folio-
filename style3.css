@@ -43,10 +43,31 @@ h2 {
 }
 
 .contact {
-    margin-top: 30px;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Ajouté pour aligner les éléments verticalement */
+    justify-content: flex-end; /* Aligne le contenu au bas du conteneur */
+    align-items: center; /* Centre horizontalement */
+   /* height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+.contact .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: #a72121;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    border: 2px solid #a72121;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: auto; /* Permet de pousser le bouton vers le bas */
+}
+
+.contact .btn:hover {
+    background-color: #d1cfcf; /* Change de couleur au survol */
 }
 
 footer {
@@ -54,20 +75,4 @@ footer {
     margin-top: 20px;
     font-size: 0.9em;
     color: #777;
-}
-
-.contact .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: rgb(194, 167, 167);
-    border-radius: 4rem;
-    font-size: 1rem;
-    color: #403eaf;
-    letter-spacing: 0.1rem;
-    font-weight: 900;
-    border: 2px solid #131313;
-    transition: 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 0 300px;
 }
