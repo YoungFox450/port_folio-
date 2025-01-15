@@ -8,7 +8,18 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 // Code typing effect
 const codeOutput = document.getElementById('code-output');
-const code = `<!DOCTYPE html>\\n<html lang="fr">\\n<head>\\n    <meta charset="UTF-8">\\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\\n    <title>Hello Monde</title>\\n</head>\\n<body>\\n    <h1>Hello monde</h1>\\n</body>\\n</html>`;
+const code = `<!DOCTYPE html>
+<html lang="fr">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello Monde</title>
+    </head>
+
+    <body>
+        <h1>Hello monde</h1>
+    </body>
+</html>`;
 
 let index = 0;
 
