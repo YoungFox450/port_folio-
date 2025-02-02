@@ -56,10 +56,10 @@ h2 {
     background-color: rgb(255, 255, 255);
     border-radius: 4rem;
     font-size: 1rem;
-    color: #a72121;
+    color: #000000;
     letter-spacing: 0.1rem;
     font-weight: 900;
-    border: 2px solid #a72121;
+    border: 2px solid #000000;
     transition: 0.3s ease;
     cursor: pointer;
     text-decoration: none;
