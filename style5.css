@@ -1,0 +1,35 @@
+body {
+    overflow: hidden;
+    /* Cache les barres de défilement */
+    background-color: #f0f0f0;
+    /* Couleur de fond de la page */
+    font-family: Arial, sans-serif;
+    /* Police utilisée pour le texte */
+    position: relative;
+    /* Permet de positionner les mots de manière absolue par rapport au corps */
+    height: 100vh;
+    /* Hauteur de la fenêtre */
+    margin: 0;
+    /* Supprime les marges par défaut du corps */
+}
+
+.word {
+    position: absolute;
+    /* Positionnement absolu pour chaque mot */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne */
+    font-size: 24px;
+    /* Taille de la police des mots */
+    color: #333;
+    /* Couleur du texte des mots */
+    opacity: 0.9;
+    /* Opacité des mots */
+    padding: 10px;
+    /* Espacement autour du mot */
+    border-radius: 5px;
+    /* Coins arrondis */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Couleur de fond des mots */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Ombre pour donner du relief */
+}
