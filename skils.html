@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8"> <!-- Définit l'encodage des caractères à UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permet une mise en page réactive -->
-    <title>Mots du Dictionnaire Français</title> <!-- Titre de la page -->
+    <title>Skills</title> <!-- Titre de la page -->
     <link rel="stylesheet" href="style5.css">
 </head>
+
 <body>
-    <div id="word-container"></div> <!-- Conteneur pour les mots -->
+    <!-- Écran de démarrage -->
+    <div id="start-screen" class="screen">
+        <div>
+            <h1>Jeu de Mots</h1>
+            <button id="start-button">Start</button>
+            <button id="return-home-button">Retour</button>
+        </div>
+    </div>
+
+    <!-- Écran de fin de jeu -->
+    <div id="end-screen" class="screen hidden">
+        <div>
+            <h1>Game Over</h1>
+            <p>Votre score final est : <span id="final-score">0</span></p>
+            <button id="restart-button">Recommencer</button>
+            <button id="return-button">Retour</button>
+        </div>
+    </div>
+
+    <!-- Écran de pause -->
+    <div id="pause-screen" class="screen hidden">
+        <div>
+            <h1>Pause</h1>
+            <button id="resume-button">Continuer</button>
+            <button id="quit-button">Quitter</button>
+        </div>
+    </div>
+
+    <!-- Interface du jeu -->
+    <div id="game-interface" class="hidden">
+        <div id="score-display">Score: 0</div>
+        <div id="hearts-container">
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+        </div>
+        <div id="word-container"></div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Tapez le mot ici..." autocomplete="off" />
+        </div>
+    </div>
     <script src="script1.js"></script>
 </body>
+
 </html>

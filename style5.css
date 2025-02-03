@@ -1,35 +1,104 @@
 body {
     overflow: hidden;
-    /* Cache les barres de défilement */
     background-color: #f0f0f0;
-    /* Couleur de fond de la page */
     font-family: Arial, sans-serif;
-    /* Police utilisée pour le texte */
     position: relative;
-    /* Permet de positionner les mots de manière absolue par rapport au corps */
     height: 100vh;
-    /* Hauteur de la fenêtre */
+    width: 100vw;
     margin: 0;
-    /* Supprime les marges par défaut du corps */
 }
-
 .word {
     position: absolute;
-    /* Positionnement absolu pour chaque mot */
     white-space: nowrap;
-    /* Empêche le retour à la ligne */
-    font-size: 24px;
-    /* Taille de la police des mots */
-    color: #333;
-    /* Couleur du texte des mots */
+    font-size: 3vw;
     opacity: 0.9;
-    /* Opacité des mots */
-    padding: 10px;
-    /* Espacement autour du mot */
+    padding: 1vh 1vw;
     border-radius: 5px;
-    /* Coins arrondis */
     background-color: rgba(255, 255, 255, 0.8);
-    /* Couleur de fond des mots */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Ombre pour donner du relief */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.word.correct {
+    background-color: #d4edda;
+    color: #155724;
+    opacity: 0;
+    transform: scale(0.9);
+}
+#input-container {
+    position: fixed;
+    bottom: 2vh;
+    width: 100%;
+    text-align: center;
+}
+input {
+    font-size: 3vw;
+    padding: 1vh 1vw;
+    width: 40vw;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+#score-display {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    font-size: 3vw;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#hearts-container {
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+    font-size: 3vw;
+    color: #ff0000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.heart {
+    display: inline-block;
+    margin: 0 0.5vw;
+}
+/* Styles pour les écrans de menu, de fin et de pause */
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    z-index: 1000;
+}
+.screen button {
+    font-size: 2vw;
+    padding: 1vh 2vw;
+    margin: 1vh 1vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.screen button:hover {
+    background-color: #0056b3;
+}
+.hidden {
+    display: none;
 }
